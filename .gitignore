@@ -1,0 +1,7 @@
+*
+!.gitignore
+!/.vimrc
+!/.vimrc.gentoo
+!/.bashrc
+!/.vim/
+!/live.ram

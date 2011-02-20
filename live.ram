@@ -1,0 +1,8 @@
+FM974 mms://alive.bjradio.com.cn/fm974
+FM915 rtsp://211.101.146.25/encoder/fm915
+
+FM106.7 Boston Magic Radio
+mplayer -playlist "http://den-a.plr.liquidcompass.net/standard_plr/inc/sa_api.php?id=WMJXFM&plr_id=1441228384142&msrc_gw"
+
+FM107.9 Boston Kiss 108
+mplayer -playlist radio/Boston_Kiss_108
