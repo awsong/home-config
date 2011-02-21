@@ -59,12 +59,14 @@ fi
 
 if [ 0 == `id -u` ] 
 then
-    ID_COLOR=${RED}
+    USR_COLOR=${RED}
+    HOST_COLOR=${GREEN}
 else
-    ID_COLOR=${YELLOW}
+    USR_COLOR=${GREEN}
+    HOST_COLOR=${YELLOW}
 fi
 if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)}${GREEN}\u${ID_COLOR}@\h${NC}: ${BLUE}\w${NC} \\$ "
+    PS1="${debian_chroot:+($debian_chroot)}${USR_COLOR}\u${HOST_COLOR}@\h${NC}: ${BLUE}\w${NC} \\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
