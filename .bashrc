@@ -8,6 +8,7 @@ GREEN='\e[1;32m'
 YELLOW='\e[1;33m'
 BLUE='\e[1;34m'
 CYAN='\e[1;36m'
+PURPLE='\e[1;35m'
 NC='\e[0m' # No Color
 
 # If not running interactively, don't do anything
@@ -66,7 +67,7 @@ else
     HOST_COLOR=${YELLOW}
 fi
 if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)}${USR_COLOR}\u${HOST_COLOR}@\h${NC}: ${BLUE}\w${NC} \\$ "
+    PS1="${debian_chroot:+($debian_chroot)}${USR_COLOR}\u${HOST_COLOR}@\h${NC}: ${BLUE}\w${NC} ${PURPLE}\\$ ${NC}"
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
