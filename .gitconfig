@@ -1,0 +1,7 @@
+[user]
+	name = Andy Song
+	email = wsong.cn@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
