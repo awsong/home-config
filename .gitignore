@@ -1,5 +1,6 @@
 /*
 !.gitignore
+!.gitconfig
 !/.vimrc
 !/.vimrc.gentoo
 !/.bashrc
