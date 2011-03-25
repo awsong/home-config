@@ -5,3 +5,7 @@
 	diff = auto
 	status = auto
 	branch = auto
+	grep = auto
+	interactive = auto
+	showbranch = auto
+	ui = auto
