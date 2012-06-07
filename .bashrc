@@ -105,6 +105,7 @@ fi
 
 export EDITOR=vim
 export LC_ALL=en_US.UTF-8
+export GOPATH=$HOME/go
 
 # Color man pages
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
