@@ -28,6 +28,7 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+export HISTSIZE=50000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -90,37 +91,36 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto -F'
+else #Mac OS X
+    alias ls='ls -G -F'
+fi
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 
 # Color man pages
-    export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
-    export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
-    export LESS_TERMCAP_me=$'\E[0m'           # end mode
-    export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
-    #export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
-    export LESS_TERMCAP_so=$'\E[32;246m'      # begin standout-mode - info box
-    export LESS_TERMCAP_ue=$'\E[0m'           # end underline
-    export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
-
-    export LESS_TERMCAP_mb=$(tput bold; tput setaf 2) # green
-    export LESS_TERMCAP_md=$(tput bold; tput setaf 6) # cyan
-    export LESS_TERMCAP_me=$(tput sgr0)
-    export LESS_TERMCAP_so=$(tput bold; tput setaf 4; tput setab 7) # blue on white
-    export LESS_TERMCAP_se=$(tput rmso; tput sgr0)
-    export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 5) # magenta
-    export LESS_TERMCAP_ue=$(tput rmul; tput sgr0)
-    export LESS_TERMCAP_mr=$(tput rev)
-    export LESS_TERMCAP_mh=$(tput dim)
-    export LESS_TERMCAP_ZN=$(tput ssubm)
-    export LESS_TERMCAP_ZV=$(tput rsubm)
-    export LESS_TERMCAP_ZO=$(tput ssupm)
-    export LESS_TERMCAP_ZW=$(tput rsupm)
-else #Mac OS X
-    alias ls='ls -G -F'
-fi
+export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
+export LESS_TERMCAP_me=$'\E[0m'           # end mode
+export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
+#export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
+export LESS_TERMCAP_so=$'\E[32;246m'      # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m'           # end underline
+export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+export LESS_TERMCAP_mb=$(tput bold; tput setaf 2) # green
+export LESS_TERMCAP_md=$(tput bold; tput setaf 6) # cyan
+export LESS_TERMCAP_me=$(tput sgr0)
+export LESS_TERMCAP_so=$(tput bold; tput setaf 4; tput setab 7) # blue on white
+export LESS_TERMCAP_se=$(tput rmso; tput sgr0)
+export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 5) # magenta
+export LESS_TERMCAP_ue=$(tput rmul; tput sgr0)
+export LESS_TERMCAP_mr=$(tput rev)
+export LESS_TERMCAP_mh=$(tput dim)
+export LESS_TERMCAP_ZN=$(tput ssubm)
+export LESS_TERMCAP_ZV=$(tput rsubm)
+export LESS_TERMCAP_ZO=$(tput ssupm)
+export LESS_TERMCAP_ZW=$(tput rsupm)
 
 export EDITOR=vim
 export LC_ALL=en_US.UTF-8
@@ -130,5 +130,22 @@ alias la='ls -a'
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
-alias school='ssh -D8088 login.ccs.neu.edu'
-alias buyvm='ssh -D8088 root@vm.3fire.org'
+alias home='ssh -D8086 wsong@home1.3fire.org'
+alias usa='ssh -D8087 root@neo.3fire.org'
+alias hk='ssh root@i.3fire.org'
+alias ubuntu='ssh uf8bc12a029f054051fb6.ant.amazon.com'
+alias rh='ssh andysong.desktop.amazon.com'
+alias ec2='ssh -D8088 ec2-user@ec2-54-92-26-121.ap-northeast-1.compute.amazonaws.com'
+export HOMEBREW_GITHUB_API_TOKEN=7782bec5f23f689a3d48d5517e9d2f51984bea9a
+
+if [ "Darwin" == `uname` ]; then
+    export TERM_PROFILE=`osascript ~/bin/vim.scpt`
+    case "${TERM_PROFILE}" in
+	Chalk)
+	    export VIM_COLOR=kolor
+	    ;;
+	*)
+	    export VIM_COLOR=default
+	    ;;
+    esac
+fi
