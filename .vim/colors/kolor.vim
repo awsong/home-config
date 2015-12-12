@@ -220,7 +220,7 @@ if &t_Co > 255
   highlight xmlEndTag       ctermfg=114     ctermbg=none    cterm=none
   if g:kolor_bold==0
     highlight ErrorMsg        ctermfg=168     ctermbg=none    cterm=none
-    highlight Search          ctermfg=208     ctermbg=none    cterm=none
+    highlight Search          ctermfg=208     ctermbg=11      cterm=none
     highlight MoreMsg         ctermfg=121     ctermbg=none    cterm=none
     highlight ModeMsg         ctermfg=254     ctermbg=none    cterm=none
     highlight CursorLineNr    ctermfg=254     ctermbg=236     cterm=none
@@ -239,7 +239,7 @@ if &t_Co > 255
     endif
   else
     highlight ErrorMsg        ctermfg=168     ctermbg=none    cterm=bold
-    highlight Search          ctermfg=208     ctermbg=none    cterm=bold
+    highlight Search          ctermfg=208     ctermbg=11      cterm=bold
     highlight MoreMsg         ctermfg=121     ctermbg=none    cterm=bold
     highlight ModeMsg         ctermfg=254     ctermbg=none    cterm=bold
     highlight CursorLineNr    ctermfg=254     ctermbg=236     cterm=bold
