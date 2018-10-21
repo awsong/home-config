@@ -76,7 +76,7 @@ if [ "$color_prompt" = yes ]; then
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
-unset color_prompt force_color_prompt
+#unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -130,7 +130,7 @@ alias la='ls -a'
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
-alias home='ssh -D8086 wsong@home1.3fire.org'
+alias home='ssh -D8086 -p10828 wsong@home1.3fire.org'
 alias usa='ssh -D8087 root@neo.3fire.org'
 alias hk='ssh root@i.3fire.org'
 alias ubuntu='ssh uf8bc12a029f054051fb6.ant.amazon.com'
@@ -148,4 +148,7 @@ if [ "Darwin" == `uname` ]; then
 	    export VIM_COLOR=default
 	    ;;
     esac
+fi
+if [ "$color_prompt" = yes ]; then
+    export VIM_COLOR=kolor
 fi
