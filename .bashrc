@@ -125,6 +125,7 @@ export LESS_TERMCAP_ZW=$(tput rsupm)
 export EDITOR=vim
 export LC_ALL=en_US.UTF-8
 export GOPATH=$HOME/go
+export HISTTIMEFORMAT="%d/%m/%y %T "
 alias ll='ls -l'
 alias la='ls -a'
 alias rm='rm -i'
