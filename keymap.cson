@@ -35,6 +35,11 @@
   'backspace': 'vim-mode-plus:scroll-full-screen-up'
   'space': 'vim-mode-plus:scroll-full-screen-down'
 
+'atom-text-editor.vim-mode-plus.visual-mode':
+  ';': 'vim-mode-plus:move-to-last-character-of-line'
+  'backspace': 'vim-mode-plus:scroll-full-screen-up'
+  'space': 'vim-mode-plus:scroll-full-screen-down'
+
 'atom-workspace':
   'f11': 'unset!'
   'f12': 'go-debug:step'
