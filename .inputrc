@@ -1,4 +1,8 @@
 set completion-ignore-case on
 set show-all-if-ambiguous on
-"\e[A": history-search-backward
-"\e[B": history-search-forward
+set editing-mode vi
+set keymap vi-insert
+    "\e[A": history-search-backward
+    "\e[B": history-search-forward
+set keymap vi-command
+    ";":"$"
