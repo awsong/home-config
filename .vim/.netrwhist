@@ -1,4 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/wsong/.VirtualBox'
-let g:netrw_dirhist_2='/etc/kernel/postinst.d'
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/private/tmp/test/ostest'
+let g:netrw_dirhist_8='/Users/wsong/Development/wireguard-apple/Sources/WireGuardKitGo'
+let g:netrw_dirhist_7='/Users/wsong/Development/wireguard-apple/Sources'
+let g:netrw_dirhist_6='/Users/wsong/Development/wireguard-apple'
+let g:netrw_dirhist_5='/Users/wsong/Development/libtailscale'
+let g:netrw_dirhist_4='/Users/wsong/Development/tmp/emmy(1)/emmy/anauth/test'
+let g:netrw_dirhist_3='/Users/wsong/.bypy'
+let g:netrw_dirhist_2='/Users/wsong/home-config/.vim/autoload'
+let g:netrw_dirhist_1='/Users/wsong/.bypy'

@@ -13,16 +13,21 @@ set hls "hightlight search
 set backspace=indent,eol,start
 set ruler
 set showcmd
-set cst
-cs add cscope.out
 vnoremap p <Esc>:let current_reg = @"<CR>gvs<C-R>=current_reg<CR><Esc>
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBuffs = 1
-set tags+=/var/tmp/portage/openipmi-1.4.14/work/OpenIPMI-1.4.14/tags
-colorscheme $VIM_COLOR
-execute pathogen#infect()
 
 filetype plugin indent on
 syntax on
 set number
+
+call plug#begin('~/.vim/plugged')
+    Plug 'pangloss/vim-javascript'    " JavaScript support
+    Plug 'leafgarland/typescript-vim' " TypeScript syntax
+    Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+    Plug 'jparise/vim-graphql'        " GraphQL syntax
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"    Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
+call plug#end()
+let g:coc_global_extensions = [ 'coc-tsserver' ]
