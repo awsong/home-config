@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-export PATH=$PATH:/opt/local/bin:/usr/local/sbin:$HOME/.cargo/bin:$HOME/go/bin
+export PATH=$PATH:/opt/local/bin:/usr/local/sbin:$HOME/.cargo/bin:$HOME/go/bin:$HOME/.local/bin:$HOME/.local/bin
 
 # Define some colors first:
 RED='\[\e[1;31m\]'
