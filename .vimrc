@@ -28,6 +28,5 @@ call plug#begin('~/.vim/plugged')
     Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
     Plug 'jparise/vim-graphql'        " GraphQL syntax
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-"    Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 call plug#end()
 let g:coc_global_extensions = [ 'coc-tsserver' ]

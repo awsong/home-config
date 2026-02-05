@@ -2,8 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-export PATH=$PATH:/opt/local/bin:/usr/local/sbin:$HOME/.cargo/bin:$HOME/Library/Python/3.7/bin:$HOME/go/bin:/opt/X11/bin:/usr/X11/bin
-export MANPATH=$MANPATH:/opt/local/man
+export PATH=$PATH:/opt/local/bin:/usr/local/sbin:$HOME/.cargo/bin:$HOME/go/bin
 
 # Define some colors first:
 RED='\[\e[1;31m\]'
@@ -124,7 +123,6 @@ export LESS_TERMCAP_ZW=$(tput rsupm)
 
 export EDITOR=vim
 export LC_ALL=en_US.UTF-8
-export GOPATH=$HOME/go
 export HISTTIMEFORMAT="%d/%m/%y %T "
 alias ll='ls -l'
 alias la='ls -a'
@@ -133,14 +131,8 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias home='ssh -D8086 -p10828 wsong@home1.3fire.org'
 alias usa='ssh -D8087 root@neo.3fire.org'
-alias hk='ssh root@i.3fire.org'
-alias ubuntu='ssh uf8bc12a029f054051fb6.ant.amazon.com'
-alias rh='ssh andysong.desktop.amazon.com'
-alias ec2='ssh -D8088 ec2-user@ec2-54-92-26-121.ap-northeast-1.compute.amazonaws.com'
-export HOMEBREW_GITHUB_API_TOKEN=218dfbbf0c11f03b3c468b1e3a93e3ced067bd82
 
 if [ "Darwin" == `uname` ]; then
-    export TERM_PROFILE=`osascript ~/bin/vim.scpt`
     case "${TERM_PROFILE}" in
 	Chalk)
 	    export VIM_COLOR=kolor
@@ -153,15 +145,11 @@ fi
 if [ "$color_prompt" = yes ]; then
     export VIM_COLOR=kolor
 fi
-export AOS_SDK_PATH=/Users/wsong/Development/AliOS-Things
-export PATH=/usr/local/opt/python@3.9/libexec/bin:$PATH
 
 export HOMEBREW_PREFIX="/opt/homebrew";
 export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
 export HOMEBREW_REPOSITORY="/opt/homebrew";
-#export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
 export PATH="${PATH}:/opt/homebrew/bin:/opt/homebrew/sbin";
 export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
 export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
-#export GOPROXY=https://mirrors.aliyun.com/goproxy/
 export GOPROXY=https://goproxy.cn
